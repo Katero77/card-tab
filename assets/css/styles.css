@@ -1,0 +1,90 @@
+*{
+  box-sizing: border-box;
+}
+.card-group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card{
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+  padding: 45px 35px;
+  border-radius: 8px;
+  color: white;
+  font-family: sans-serif;
+  background-color: gray;
+
+
+}
+
+.card::before {
+  top: -75px;
+  right: -85px;
+}
+
+.card::after {
+  bottom: -95px;
+  right: -45px;
+}
+
+.card::after{
+  content: "";
+  display: block;
+  position: absolute;
+  --size: 180px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+}
+.card::before{
+  content: "";
+  display: block;
+  position: absolute;
+  --size: 180px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+}
+
+.card-header {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.card-title {
+  display: inline-block;
+}
+
+.icon {
+  margin-left: auto;
+
+}
+.card-text{
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  font-weight: bold;
+
+}
+.card:nth-child(3n+1){
+  background:rgb(252, 191, 156) ;
+  background: linear-gradient(90deg,rgb(252,191,156) 0%,rgb(254,153,171) 100%);
+
+}
+
+.card:nth-child(3n){
+  background: rgb(126, 218, 210);
+  background: linear-gradient(90deg,rgb(126,218,210) 0%,rgb(51,217,197) 100%);
+
+}
+
+.card:nth-child(3n+2){
+  background: rgb(140, 198, 245);
+  background: linear-gradient(90deg,rgba(140, 198, 245, 1) 0%,rgba(50, 149, 217, 1) 100%);
+}
